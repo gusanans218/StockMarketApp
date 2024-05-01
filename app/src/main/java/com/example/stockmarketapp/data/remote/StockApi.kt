@@ -8,8 +8,8 @@ interface StockApi {
 
     @GET("query?function=LISTING_STATUS")
     suspend fun getListings(
-        @Query("apikey") api:String
-    ) : ResponseBody
+        @Query("apikey") api: String = API_KEY
+    ): ResponseBody
 
     companion object {
         const val API_KEY = "4XAR5QB0Z2AQYQXC"
