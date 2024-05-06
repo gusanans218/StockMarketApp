@@ -58,7 +58,8 @@ fun CompanyListingsScreen(
             ) {
                 items(state.companies.size) { i ->
                     val company = state.companies[i]
-                    CompanyItem(company = company,
+                    CompanyItem(
+                        company = company,
                         modifier = Modifier
                             .fillMaxWidth()
                             .clickable {
@@ -66,12 +67,10 @@ fun CompanyListingsScreen(
                             }
                             .padding(16.dp)
                     )
-                    if (i < state.companies.size) {
-                        Divider(
-                            modifier = Modifier.padding(
-                                horizontal = 16.dp
-                            )
-                        )
+                    if(i < state.companies.size) {
+                        Divider(modifier = Modifier.padding(
+                            horizontal = 16.dp
+                        ))
                     }
                 }
             }
